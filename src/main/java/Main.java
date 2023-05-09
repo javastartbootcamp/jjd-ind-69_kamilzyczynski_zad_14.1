@@ -7,11 +7,7 @@ public class Main {
         try {
             List<Integer> integers = fileUtils.readFile("liczby.txt");
 
-            Set<Integer> uniqueNumbers = new TreeSet<>();
-
-            for (Integer integer : integers) {
-                uniqueNumbers.add(integer);
-            }
+            Set<Integer> uniqueNumbers = new TreeSet<>(integers);
 
             for (Integer uniqueNumber : uniqueNumbers) {
                 int counter = 0;
